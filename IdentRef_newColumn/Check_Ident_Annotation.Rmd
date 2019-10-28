@@ -1,0 +1,273 @@
+---
+title: "Check_Ident_New Column"
+author: "Tobias Opialla"
+date: "June 21, 2019"
+output: 
+  word_document:
+    toc: true
+  html_document:
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    toc_depth: 3
+    number_sections: true
+params:
+    use_uncorrected_input: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.width = 8,fig.height = 6,fig.keep = T,fig.path = "./IdentRef_newColumn/")
+```
+
+# load packages
+
+```{r load packages}
+library(tidyverse)
+library(cowplot)
+library(ggplot2)
+```
+
+# read raw data
+
+
+
+First round, the raw data had a fluke in the Sucrose annotation. 
+<font color="red" size=6> In this run of the script  the fluke  was `r ifelse(params$use_uncorrected_input,"***not***", "***definitely***")` corrected.</font>
+
+```{r read raw data, warning=FALSE}
+
+if(params$use_uncorrected_input){
+  rm(df)
+  for(file in dir(pattern = "IdentRef.tsv")){
+    
+    cdf=read.delim(file)
+    cdf$file=file
+    if(!is.data.frame(df)){
+      df=cdf
+    }else{
+      df=rbind(df,cdf)
+      rm(cdf)
+    }
+  }
+}else{
+  rm(df)
+  for(file in dir(pattern = "cdf-Ident.*\\.tsv")){
+    if(file=="CTPLI-e19154to_005_IdentC.cdf-IdentRef.tsv"){
+      next()
+    }else{
+      cdf=read.delim(file)
+      cdf$file=file
+      if(!is.data.frame(df)){
+        df=cdf
+      }else{
+        df=rbind(df,cdf)
+        rm(cdf)
+      }
+    }
+  }
+}
+
+
+```
+
+# format raw data
+
+```{r format raw data filter unknowns}
+df=df %>% filter(!grepl("Unknown",Name))
+df$ident=gsub(".*(Ident[ABCD]).*","\\1",df$file)
+df=arrange(df,ident)
+df$n_MEOX=gsub(".*(\\d+)MEOX.*","\\1",df$Name)
+df$n_MEOX=ifelse(nchar(df$n_MEOX)>2,0,df$n_MEOX) %>% as.numeric()
+df$n_TMS=gsub(".*(\\d+)TMS.*","\\1",df$Name)
+df$n_TMS=ifelse(nchar(df$n_TMS)>2,0,df$n_TMS) %>% as.numeric()
+df$RI_library=gsub(".*RI:(\\d+).*","\\1",df$Name) %>% as.numeric() # alkanes give NAs
+df$RI_library=ifelse(is.na(df$RI_library),
+                     gsub("c","",df$Name) %>% as.numeric()*100,
+                     df$RI_library) #for alkanes
+df$fc_RI_vs_lib=df$RetentionIndex/df$RI_library
+```
+
+# get pairings for comparison
+
+```{r pairings for RI data}
+df_sum=df %>% group_by(Name,n_TMS,n_MEOX) %>% summarise(
+  RI1=first(RetentionIndex),
+  Rt1=first(RetentionTime),
+  fc_RI_vs_lib1=first(fc_RI_vs_lib),
+  Ident1=first(ident),
+  
+  RI2=last(RetentionIndex),
+  Rt2=last(RetentionTime),
+  fc_RI_vs_lib2=last(fc_RI_vs_lib),
+  Ident2=last(ident),
+  
+  n_hits=length(RetentionIndex)
+  
+) %>% mutate(fc_RI_vs_lib_mean=mean(c(fc_RI_vs_lib1,fc_RI_vs_lib2),na.rm = T),
+             RI_new_mean=mean(c(RI1,RI2),na.rm = T))
+
+df_sum$RI_fold_change=df_sum$RI1/df_sum$RI2
+df_sum$Rt_fold_change=df_sum$Rt1/df_sum$Rt2
+
+df_sum$RI_delta=abs(df_sum$RI1 - df_sum$RI2)
+df_sum$Rt_delta=abs(df_sum$Rt1 - df_sum$Rt2)
+```
+
+# Plot RIs to check mis-annotations
+
+```{r plot RIs}
+ggplot(df_sum, aes(x=RI1,y=RI2,color=factor(n_hits)))+
+  geom_abline(slope = 1,intercept = 0)+
+  geom_point()+
+  coord_equal()+
+  scale_colour_viridis_d()+
+  ggtitle("RI1 vs RI2")
+
+ggplot(df_sum, aes(x=RI1,y=RI_delta,color=factor(n_hits)))+
+  geom_abline(slope = 1,intercept = 0)+
+  geom_point()+
+  #coord_equal()+
+  scale_colour_viridis_d()+
+  scale_y_continuous(breaks=seq(0,60,5))+
+  ggtitle("delta between two Idents to spot annotation errors")+
+  ggrepel::geom_label_repel(data=df_sum %>% filter(RI_delta>2),aes(label=Name),nudge_y = c(5,-5),show.legend = F)
+```
+
+there are is one **obvious** error, zoom in more on y
+
+```{r zoom in yaxis}
+ggplot(df_sum, aes(x=RI1,y=RI_delta,color=factor(n_hits)))+
+  geom_abline(slope = 1,intercept = 0)+
+  geom_point()+
+  #coord_equal()+
+  scale_colour_viridis_d()+
+  ggtitle("delta between two Idents to spot annotation errors", subtitle = "zoom on y-axis")+
+  ylim(NA,5)+
+  ggrepel::geom_label_repel(data=df_sum %>% filter(RI_delta>2),aes(label=Name),nudge_x = 500,nudge_y = 1,show.legend = F)
+```
+
+A delta in RI of ca 2.5 is very acceptable
+
+# plot Deltas vs Library to check movements
+
+```{r plot deltas}
+
+
+p.TMS=ggplot(df_sum,aes(x=fc_RI_vs_lib_mean,color=factor(n_TMS)))+
+  geom_rug()+
+  geom_density()+
+  scale_colour_viridis_d()
+
+
+p.MEOX=ggplot(df_sum,aes(x=fc_RI_vs_lib_mean,color=factor(n_MEOX)))+
+  geom_rug()+
+  geom_density()+
+  scale_colour_viridis_d()
+
+
+plot_grid(p.TMS,p.MEOX,ncol = 1, align = "h",axis="l")
+
+p.TMS=ggplot(df_sum,aes(x=fc_RI_vs_lib_mean,color=factor(n_TMS)))+
+  geom_rug()+
+  geom_density()+
+  geom_vline(data=df_sum %>% filter(n_hits<2),aes(xintercept=fc_RI_vs_lib_mean,color=factor(n_TMS)))+
+  scale_colour_viridis_d()+
+  ggtitle("with lines for compounds only identified in one ident",
+          subtitle = "seems to be ok, delta is usually with group mean or smaller")
+
+
+p.MEOX=ggplot(df_sum,aes(x=fc_RI_vs_lib_mean,color=factor(n_MEOX)))+
+  geom_rug()+
+  geom_density()+
+  geom_vline(data=df_sum %>% filter(n_hits<2),aes(xintercept=fc_RI_vs_lib_mean,color=factor(n_MEOX)))+
+  scale_colour_viridis_d()
+
+
+plot_grid(p.TMS,p.MEOX,ncol = 1, align = "h",axis="l")
+
+```
+
+
+# compare vs library entry
+
+```{r compare to library entry}
+ggplot(df,aes(x=RI_library,y=RetentionIndex,color=ident))+
+  geom_abline(slope = 1,intercept = 0)+
+  geom_point()+
+  coord_equal()
+
+ggplot(df,aes(x=fc_RI_vs_lib,color=factor(n_TMS)))+
+  geom_rug()+
+  geom_density()+
+  scale_colour_viridis_d()
+
+
+ggplot(df,aes(x=fc_RI_vs_lib,color=factor(n_MEOX)))+
+  geom_rug()+
+  geom_density()+
+  scale_colour_viridis_d()
+
+
+
+ggplot(df,aes(y=fc_RI_vs_lib,x=n_MEOX,color=ident))+
+  geom_violin(color="black",aes(group=n_MEOX))+
+  geom_jitter(size=5,alpha=0.5,width = 0.1,height = 0)+
+  scale_color_brewer(palette = "Set1")+
+  geom_line(aes(group=Name))+
+  coord_flip()
+
+ggplot(df,aes(y=fc_RI_vs_lib,x=n_TMS,color=ident))+
+  geom_violin(color="black",aes(group=n_TMS))+
+  geom_jitter(size=5,alpha=0.5,width = 0.2,height = 0)+
+  scale_color_brewer(palette = "Set1")+
+  scale_x_continuous(breaks = 0:8)+
+   geom_line(aes(group=Name))+
+  coord_flip()
+
+ggplot(df,aes(y=fc_RI_vs_lib,x=n_TMS,color=ident))+
+  geom_violin(color="black",aes(group=n_TMS))+
+  geom_jitter(aes(shape=factor(n_MEOX)),size=5,alpha=0.5,width = 0.2,height = 0)+
+  scale_color_brewer(palette = "Set1")+
+   scale_x_continuous(breaks = 0:8)+
+  coord_flip()
+
+
+ggplot(df,aes(y=fc_RI_vs_lib,x=n_TMS,color=ident))+
+  geom_violin(aes(group=paste0(n_TMS,n_MEOX),linetype=factor(n_MEOX)),fill=NA,scale = "width")+
+  geom_jitter(aes(shape=factor(n_MEOX)),size=5,alpha=0.5,width = 0.2,height = 0)+
+  scale_color_brewer(palette = "Set1")+
+  scale_x_continuous(breaks = 0:8)+
+  coord_flip()
+  
+
+
+ggplot(df,aes(y=fc_RI_vs_lib,x=n_TMS,color=ident))+
+  geom_violin(color="black",aes(group=n_TMS))+
+  geom_jitter(size=5,alpha=0.5,width = 0.2,height = 0)+
+  scale_color_brewer(palette = "Set1")+
+  coord_flip()+
+  scale_x_continuous(breaks = 0:8)+
+  facet_wrap(~n_MEOX,ncol = 1)
+```
+
+The only compound in question is Sucrose. It's likely that the measurement in IdentA is correct, the one in IdentC is probably the one found by the search and wronly locked.
+
+# write new table
+
+Write output for new ident
+
+```{r write output for new ident}
+#make sure, that it's only written from the corrected input
+if(!params$use_uncorrected_input){
+  df_output=df_sum %>% ungroup %>% select(Name,RI_new_mean) %>% filter(!str_detect(Name,"^c\\d\\d$")) #filter alkanes
+  df_output$RI_set=df_output$RI_new_mean
+  df_output$RI_new_mean=round(df_output$RI_new_mean)
+  df_output=df_output %>% arrange(RI_set)
+  while(any(duplicated(df_output$RI_new_mean))){
+    df_output$RI_new_mean[duplicated(df_output$RI_new_mean)]=
+      df_output$RI_new_mean[duplicated(df_output$RI_new_mean)]+1 #shift duplicated ones by one so they don't overlap in SILVIA
+  }
+  write.table(df_output,paste0("New_RIs_",Sys.Date(),".tsv"),row.names = F,col.names = T,sep = "\t")
+}
+```
+

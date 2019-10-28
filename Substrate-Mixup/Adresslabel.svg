@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg6720"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="Adresslabel.svg">
+  <defs
+     id="defs6714">
+    <marker
+       inkscape:stockid="Arrow2Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path7508"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#d50029;stroke-opacity:1;fill:#d50029;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) translate(1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Tail"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker8207"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <g
+         id="g8205"
+         transform="scale(-1.2)"
+         style="stroke:#d50029;stroke-opacity:1;fill:#d50029;fill-opacity:1">
+        <path
+           id="path8193"
+           d="M -3.8048674,-3.9585227 L 0.54352094,0"
+           style="fill:#d50029;fill-rule:evenodd;stroke:#d50029;stroke-width:0.8;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+        <path
+           id="path8195"
+           d="M -1.2866832,-3.9585227 L 3.0617053,0"
+           style="fill:#d50029;fill-rule:evenodd;stroke:#d50029;stroke-width:0.8;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+        <path
+           id="path8197"
+           d="M 1.3053582,-3.9585227 L 5.6537466,0"
+           style="fill:#d50029;fill-rule:evenodd;stroke:#d50029;stroke-width:0.8;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+        <path
+           id="path8199"
+           d="M -3.8048674,4.1775838 L 0.54352094,0.21974226"
+           style="fill:#d50029;fill-rule:evenodd;stroke:#d50029;stroke-width:0.8;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+        <path
+           id="path8201"
+           d="M -1.2866832,4.1775838 L 3.0617053,0.21974226"
+           style="fill:#d50029;fill-rule:evenodd;stroke:#d50029;stroke-width:0.8;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+        <path
+           id="path8203"
+           d="M 1.3053582,4.1775838 L 5.6537466,0.21974226"
+           style="fill:#d50029;fill-rule:evenodd;stroke:#d50029;stroke-width:0.8;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+      </g>
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DistanceEnd"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="DistanceEnd"
+       inkscape:isstock="true">
+      <g
+         id="g2301"
+         style="stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1">
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1.15;stroke-linecap:square;stroke-opacity:1;fill-opacity:1"
+           d="M 0,0 L -2,0"
+           id="path2316" />
+        <path
+           style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-opacity:1;fill-opacity:1"
+           d="M 0,0 L -13,4 L -9,0 -13,-4 L 0,0 z "
+           id="path2312" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-opacity:1;fill-opacity:1"
+           d="M 0,-4 L 0,40"
+           id="path2314" />
+      </g>
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DistanceStart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="DistanceStart"
+       inkscape:isstock="true">
+      <g
+         id="g2300"
+         style="stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1">
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1.15;stroke-linecap:square;stroke-opacity:1;fill-opacity:1"
+           d="M 0,0 L 2,0"
+           id="path2306" />
+        <path
+           style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-opacity:1;fill-opacity:1"
+           d="M 0,0 L 13,4 L 9,0 13,-4 L 0,0 z "
+           id="path2302" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-opacity:1;fill-opacity:1"
+           d="M 0,-4 L 0,40"
+           id="path2304" />
+      </g>
+    </marker>
+    <marker
+       inkscape:stockid="Tail"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Tail"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <g
+         id="g7538"
+         transform="scale(-1.2)"
+         style="stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1">
+        <path
+           id="path7526"
+           d="M -3.8048674,-3.9585227 L 0.54352094,0"
+           style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.8;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+        <path
+           id="path7528"
+           d="M -1.2866832,-3.9585227 L 3.0617053,0"
+           style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.8;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+        <path
+           id="path7530"
+           d="M 1.3053582,-3.9585227 L 5.6537466,0"
+           style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.8;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+        <path
+           id="path7532"
+           d="M -3.8048674,4.1775838 L 0.54352094,0.21974226"
+           style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.8;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+        <path
+           id="path7534"
+           d="M -1.2866832,4.1775838 L 3.0617053,0.21974226"
+           style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.8;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+        <path
+           id="path7536"
+           d="M 1.3053582,4.1775838 L 5.6537466,0.21974226"
+           style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.8;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+      </g>
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path7511"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path7493"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <pattern
+       y="0"
+       x="0"
+       height="6"
+       width="6"
+       patternUnits="userSpaceOnUse"
+       id="EMFhbasepattern" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.89352553"
+     inkscape:cx="396.85039"
+     inkscape:cy="561.25984"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1138"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata6717">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g7454"
+       transform="matrix(0.9159678,0,0,0.9159678,9.0163237,39.764927)">
+      <text
+         id="text7342"
+         y="127.37566"
+         x="100.60889"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29691696px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:'Calibri, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.50049609"
+         xml:space="preserve"><tspan
+           style="font-weight:bold;stroke-width:0.50049609"
+           y="127.37566"
+           x="100.60889"
+           id="tspan7340"
+           sodipodi:role="line">An:</tspan><tspan
+           style="stroke-width:0.50049609"
+           id="tspan7344"
+           y="133.99681"
+           x="100.60889"
+           sodipodi:role="line">Deutsches Krebsforschungszentrum</tspan><tspan
+           style="stroke-width:0.50049609"
+           id="tspan7346"
+           y="140.61795"
+           x="100.60889"
+           sodipodi:role="line">Im Neuenheimer Feld 580</tspan><tspan
+           style="stroke-width:0.50049609"
+           id="tspan7348"
+           y="147.23911"
+           x="100.60889"
+           sodipodi:role="line">Aurelio Teleman and Fabiola Garcia</tspan><tspan
+           id="tspan7422"
+           style="stroke-width:0.50049609"
+           y="153.86024"
+           x="100.60889"
+           sodipodi:role="line">Signal Transduction Cancer&amp;Metabolism (B140)</tspan><tspan
+           style="stroke-width:0.50049609"
+           id="tspan7350"
+           y="160.4814"
+           x="100.60889"
+           sodipodi:role="line">69120 Heidelberg</tspan><tspan
+           style="stroke-width:0.50049609"
+           id="tspan7352"
+           y="167.10254"
+           x="100.60889"
+           sodipodi:role="line" /><tspan
+           style="stroke-width:0.50049609"
+           id="tspan7354"
+           y="173.72369"
+           x="100.60889"
+           sodipodi:role="line">Tel: 06221 42-1623</tspan><tspan
+           style="stroke-width:0.50049609"
+           id="tspan7396"
+           y="180.34483"
+           x="100.60889"
+           sodipodi:role="line">oder 0152 51 92 61 72</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29691696px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:'Calibri, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.50049609"
+         x="6.9136791"
+         y="127.37566"
+         id="text7418"><tspan
+           sodipodi:role="line"
+           id="tspan7400"
+           x="6.9136791"
+           y="127.37566"
+           style="font-weight:bold;stroke-width:0.50049609">Von:</tspan><tspan
+           sodipodi:role="line"
+           x="6.9136791"
+           y="133.99681"
+           style="font-size:4.23333311px;stroke-width:0.50049609"
+           id="tspan7402">MDC Berlin</tspan><tspan
+           id="tspan7424"
+           sodipodi:role="line"
+           x="6.9136791"
+           y="140.61795"
+           style="font-size:4.23333311px;stroke-width:0.50049609">Haus 87, Raum 1.20</tspan><tspan
+           id="tspan7426"
+           sodipodi:role="line"
+           x="6.9136791"
+           y="147.23911"
+           style="font-size:4.23333311px;stroke-width:0.50049609">Tobias Opialla, AG Kempa</tspan><tspan
+           sodipodi:role="line"
+           x="6.9136791"
+           y="153.86024"
+           id="tspan7406"
+           style="font-size:4.23333311px;stroke-width:0.50049609">Robert-Rössle-Straße 10</tspan><tspan
+           sodipodi:role="line"
+           x="6.9136791"
+           y="160.4814"
+           id="tspan7412"
+           style="font-size:4.23333311px;stroke-width:0.50049609">13125 Berlin</tspan><tspan
+           sodipodi:role="line"
+           x="6.9136791"
+           y="167.10254"
+           id="tspan7414"
+           style="font-size:4.23333311px;stroke-width:0.50049609">Tel: 030 9406-3031</tspan><tspan
+           sodipodi:role="line"
+           x="6.9136791"
+           y="173.72369"
+           id="tspan7416"
+           style="font-size:4.23333311px;stroke-width:0.50049609">oder 0175 960 15 98</tspan></text>
+    </g>
+    <g
+       style="overflow:visible"
+       id="g7480"
+       transform="matrix(0.7481396,0,0,0.7481396,39.257981,22.999544)">
+      <polygon
+         id="polygon7467"
+         points="175.748,38.786 0,38.786 0,0 175.748,0 "
+         style="fill:#fecc00" />
+      <path
+         id="path7469"
+         d="m 56.665,16.206 c -0.768,1.04 -2.053,2.848 -2.835,3.904 -0.397,0.537 -1.114,1.512 1.263,1.512 2.515,0 12.515,0 12.515,0 0,0 2.017,-2.744 3.708,-5.039 2.3,-3.122 0.199,-9.618 -8.024,-9.618 -7.36,0 -32.384,0 -32.384,0 l -5.615,7.629 c 0,0 29.109,0 30.603,0 1.545,0 1.524,0.588 0.769,1.612 z m -9.194,7.298 c -2.377,0 -1.66,-0.977 -1.263,-1.514 0.782,-1.056 2.088,-2.845 2.856,-3.885 0.756,-1.024 0.776,-1.612 -0.771,-1.612 -1.493,0 -13.996,0 -13.996,0 L 23.02,31.819 c 0,0 20.141,0 27.501,0 9.083,0 14.14,-6.178 15.699,-8.314 0,-10e-4 -16.235,-10e-4 -18.749,-10e-4 z m 17.89,8.315 h 16.133 l 6.116,-8.316 -16.131,0.002 c -0.005,-10e-4 -6.118,8.314 -6.118,8.314 z m 41.625,-24.854 -6.188,8.405 h -7.2 L 99.783,6.965 H 83.655 l -10.79,14.657 h 39.46 L 123.112,6.965 Z M 88.694,31.819 h 16.127 l 6.119,-8.314 H 94.813 c -0.006,-10e-4 -6.119,8.314 -6.119,8.314 z M 0,26.784 v 1.766 h 22.468 l 1.298,-1.766 z m 26.181,-3.28 H 0 v 1.764 H 24.88 Z M 0,31.819 h 20.061 l 1.292,-1.756 H 0 Z m 152.072,-3.27 h 23.676 v -1.766 h -22.376 z m -2.405,3.27 h 26.081 v -1.756 h -24.79 z m 6.116,-8.315 -1.297,1.766 h 21.262 V 23.504 Z M 134.659,21.622 145.448,6.965 h -17.081 c -0.006,0 -10.797,14.657 -10.797,14.657 z m -18.472,1.882 c 0,0 -1.179,1.611 -1.752,2.387 -2.025,2.736 -0.234,5.928 6.376,5.928 7.636,0 25.901,0 25.901,0 l 6.119,-8.314 h -36.644 z"
+         inkscape:connector-curvature="0"
+         style="fill:#d50029" />
+    </g>
+    <path
+       style="fill:none;stroke:#d50029;stroke-width:1.56500006;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Lstart);marker-end:url(#marker8207)"
+       d="M 28.47591,86.168494 H 176.23563"
+       id="path7482"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#fecc00;fill-opacity:1;stroke:none;stroke-width:0.2832095;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:0.56641905, 0.56641905;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect7484"
+       width="131.48404"
+       height="24.379925"
+       x="39.25798"
+       y="49.055771" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.64398479px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:'Calibri, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#d50029;fill-opacity:1;stroke:none;stroke-width:0.3910996"
+       x="73.68412"
+       y="66.215332"
+       id="text7488"><tspan
+         sodipodi:role="line"
+         id="tspan7486"
+         x="73.68412"
+         y="66.215332"
+         style="font-weight:bold;fill:#d50029;fill-opacity:1;stroke-width:0.3910996">Abholung</tspan></text>
+  </g>
+</svg>

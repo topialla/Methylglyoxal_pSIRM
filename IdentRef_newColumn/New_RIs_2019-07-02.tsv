@@ -1,0 +1,120 @@
+"Name"	"RI_new_mean"
+"Aconitic acid_ cis-_(3TMS)_MP_RI:1747_IDENT:A+D"	1768
+"Adenosine_(4TMS)_MP_RI:2644_IDENT:A+B"	2687
+"Alanine_ beta-_(2TMS)_BP_RI:1188_IDENT:A+D"	1198
+"Alanine_ beta-_(3TMS)_MP_RI:1435_IDENT:A+D"	1447
+"Arginine [-NH3]_(3TMS)_MP_RI:1819_IDENT:A+C"	1845
+"Aspartic acid_(2TMS)_BP_RI:1433_IDENT:A+C"	1442
+"Aspartic acid_(3TMS)_MP_RI:1517_IDENT:A+C"	1540
+"Butanoic acid_ 3-hydroxy-_(2TMS)_MP_RI:1156_IDENT:A+B"	1168
+"Butanoic acid_ 4-amino-_(3TMS)_MP_RI:1527_IDENT:A+C"	1544
+"Cytosine_(2TMS)_MP_RI:1520_IDENT:A+B"	1537
+"Cytosine_(3TMS)_BP_RI:1629_IDENT:A+B"	1647
+"Dihydroxyacetone phosphate_(1MEOX)(3TMS)_BP_RI:1751_IDENT:A+B"	1785
+"Dihydroxyacetone phosphate_(1MEOX)(3TMS)_MP_RI:1739_IDENT:A+B"	1773
+"Erythritol_(4TMS)_MP_RI:1503_IDENT:A+B"	1537
+"Erythrose-4-phosphate_(1MEOX)(4TMS)_BP_RI:1894_IDENT:A+D"	1947
+"Erythrose-4-phosphate_(1MEOX)(4TMS)_MP_RI:1904_IDENT:A+D"	1958
+"Fructose-6-phosphate_(1MEOX)(6TMS)_MP_RI:2302_IDENT:A+C"	2385
+"Fumaric acid_(2TMS)_MP_RI:1366_IDENT:A+C"	1369
+"Galactose_(1MEOX)(5TMS)_MP_RI:1880_IDENT:A+C"	1948
+"Gluconic acid-6-phosphate_(7TMS)_MP_RI:2426_IDENT:A+D"	2513
+"Glucosamine_ N-acetyl-_(1MEOX)(4TMS)_BP_RI:2073_IDENT:A+C"	2127
+"Glucosamine_ N-acetyl-_(1MEOX)(4TMS)_MP_RI:2079_IDENT:A+C"	2132
+"Glucose-1/6-phosphate_(1MEOX)(6TMS)_MP_RI:2316_IDENT:C+D/A+B"	2399
+"Glucose-6-phosphate_(1MEOX)(6TMS)_BP_RI:2317_IDENT:A+B"	2420
+"Glucuronic acid_(1MEOX)(5TMS)_MP_RI:1927_IDENT:A+C"	2006
+"Glutamic acid_(2TMS)_BP_RI:1533_IDENT:A+B"	1543
+"Glutamic acid_(3TMS)_MP_RI:1620_IDENT:A+B"	1639
+"Glutaric acid_ 2-hydroxy-_(3TMS)_MP_RI:1577_IDENT:A+D"	1596
+"Glutaric acid_(2TMS)_MP_RI:1418_IDENT:A+B"	1424
+"Glycine_(2TMS)_BP_RI:1117_IDENT:A+C"	1124
+"Glycine_(3TMS)_MP_RI:1314_IDENT:A+C"	1330
+"Hypotaurine_(3TMS)_MP_RI:1597_IDENT:A+C"	1615
+"Isocitric acid_(4TMS)_MP_RI:1817_IDENT:A+C"	1852
+"Isoleucine_(1TMS)_BP_RI:1174_IDENT:A+D"	1179
+"Isoleucine_(2TMS)_MP_RI:1302_IDENT:A+D"	1319
+"Lysine_(3TMS)_BP_RI:1849_IDENT:A+C"	1867
+"Lysine_(4TMS)_MP_RI:1915_IDENT:A+C"	1950
+"Mannose_(1MEOX)(5TMS)_MP_RI:1876_IDENT:A+D"	1931
+"Pantothenic acid_(3TMS)_MP_RI:1993_IDENT:A+D"	2032
+"Phosphoenolpyruvic acid_(3TMS)_MP_RI:1598_IDENT:A+D"	1624
+"Proline_(1TMS)_BP_RI:1172_IDENT:A+B"	1176
+"Putrescine_(3TMS)_BP_RI:1507_IDENT:A+D"	1507
+"Putrescine_(4TMS)_MP_RI:1730_IDENT:A+D"	1754
+"Pyroglutamic acid_(2TMS)_MP_RI:1518_IDENT:A+D"	1534
+"Pyruvic acid_(1MEOX)(1TMS)_MP_RI:1045_IDENT:A+D"	1054
+"Ribitol_(5TMS)_MP_RI:1716_IDENT:A+B"	1761
+"Ribose_ 2-deoxy-_(1MEOX)(3TMS)_BP_RI:1572_IDENT:A+D"	1600
+"Ribose_ 2-deoxy-_(1MEOX)(3TMS)_MP_RI:1574_IDENT:A+D"	1601
+"Ribulose-5-phosphate_(1MEOX)(5TMS)_BP_RI:2096_IDENT:A+B"	2156
+"Ribulose-5-phosphate_(1MEOX)(5TMS)_MP_RI:2112_IDENT:A+B"	2171
+"Sorbitol_(6TMS)_MP_RI:1926_IDENT:A+D"	1991
+"Spermidine_(4TMS)_BP_RI:2189_IDENT:A+C"	2220
+"Spermidine_(5TMS)_MP_RI:2246_IDENT:A+C"	2296
+"Succinic acid_(2TMS)_MP_RI:1327_IDENT:A+D"	1336
+"Sucrose_(8TMS)_MP_RI:2632_IDENT:A+C"	2718
+"Trehalose_a-a-_(8TMS)_MP_RI:2729_IDENT:A+B"	2814
+"Uracil_(2TMS)_MP_RI:1350_IDENT:A+C"	1363
+"Urea_(2TMS)_MP_RI:1249_IDENT:A+C"	1253
+"Uridine_(3TMS)_MP_RI:2469_IDENT:A+D"	2506
+"Xylose_(1MEOX)(4TMS)_BP_RI:1642_IDENT:A+C"	1681
+"Xylose_(1MEOX)(4TMS)_MP_RI:1651_IDENT:A+C"	1690
+"Alanine_(2TMS)_BP_RI:1097_IDENT:B+C"	1107
+"Alanine_(3TMS)_MP_RI:1367_IDENT:B+C"	1383
+"Asparagine_(2TMS)_BP_RI:1599_IDENT:B+D"	1610
+"Asparagine_(3TMS)_MP_RI:1667_IDENT:B+D"	1689
+"Citric acid_(4TMS)_MP_RI:1814_IDENT:B+D"	1849
+"Creatinine_(3TMS)_MP_RI:1549_IDENT:B+C"	1573
+"Cysteine_(3TMS)_MP_RI:1554_IDENT:B+D"	1574
+"Fructose_(1MEOX)(5TMS)_BP_RI:1872_IDENT:B+C"	1927
+"Fructose_(1MEOX)(5TMS)_MP_RI:1862_IDENT:B+C"	1914
+"Galactitol_(6TMS)_MP_RI:1932_IDENT:B+C"	1996
+"Galactosamine_ N-acetyl-_(1MEOX)(4TMS)_MP_RI:2099_IDENT:B+D"	2108
+"Galacturonic acid_(1MEOX)(5TMS)_BP_RI:1957_IDENT:B+D"	2019
+"Galacturonic acid_(1MEOX)(5TMS)_MP_RI:1935_IDENT:B+D"	1999
+"Gluconic acid_(6TMS)_MP_RI:1996_IDENT:B+C"	2059
+"Glucose_(1MEOX)(5TMS)_BP_RI:1904_IDENT:B+D"	1966
+"Glucose_(1MEOX)(5TMS)_MP_RI:1886_IDENT:B+D"	1946
+"Glutamic acid_ N-acetyl-_(2TMS)_MP_RI:1781_IDENT:B+C"	1799
+"Glutaric acid_ 2-oxo-_(1MEOX)(2TMS)_MP_RI:1579_IDENT:B+C"	1596
+"Glyceric acid-3-phosphate_(4TMS)_MP_RI:1802_IDENT:B+D"	1840
+"Glyceric acid_(3TMS)_MP_RI:1342_IDENT:A+B"	1362
+"Glycerol-3-phosphate_(4TMS)_MP_RI:1756_IDENT:B+C"	1794
+"Isobutanoic acid_ 3-amino-_(3TMS)_MP_RI:1460_IDENT:B+C"	1475
+"Lactic acid_(2TMS)_MP_RI:1055_IDENT:B+C"	1066
+"Lactose_(1MEOX)(8TMS)_BP_RI:2694_IDENT:B+D"	2768
+"Lactose_(1MEOX)(8TMS)_MP_RI:2678_IDENT:B+D"	2739
+"Leucine_(1TMS)_BP_RI:1153_IDENT:B+C"	1158
+"Leucine_(2TMS)_MP_RI:1277_IDENT:B+C"	1295
+"Maleic acid_(2TMS)_MP_RI:1315_IDENT:B+C"	1327
+"Malic acid_(3TMS)_MP_RI:1487_IDENT:B+D"	1507
+"Ornithine_(3TMS)_MP_RI:1748_IDENT:B+D"	1768
+"Ornithine_(4TMS)_MP_RI:1812_IDENT:B+D"	1841
+"Phenylalanine_(1TMS)_BP_RI:1547_IDENT:B+C"	1554
+"Phenylalanine_(2TMS)_MP_RI:1625_IDENT:B+C"	1642
+"Proline [+CO2]_(2TMS)_BP_RI:1585_IDENT:A+B"	1597
+"Proline_(2TMS)_MP_RI:1305_IDENT:A+B"	1319
+"Pyruvic acid_ 3-hydroxy-_(1MEOX)(2TMS)_BP_RI:1294_IDENT:B+D"	1315
+"Pyruvic acid_ 3-hydroxy-_(1MEOX)(2TMS)_MP_RI:1348_IDENT:B+D"	1365
+"Ribose_(1MEOX)(4TMS)_MP_RI:1672_IDENT:B+D"	1696
+"Thymine_(2TMS)_MP_RI:1410_IDENT:B+D"	1424
+"Valine_(1TMS)_BP_RI:1084_IDENT:B+D"	1087
+"Valine_(2TMS)_MP_RI:1212_IDENT:B+D"	1230
+"Arabitol_(5TMS)_MP_RI:1711_IDENT:C+D"	1756
+"Butanoic acid_ 2-amino-_(2TMS)_MP_RI:1168_IDENT:C+D"	1181
+"Fructose-1_6-diphosphate_(1MEOX)(7TMS)_MP_RI:2705_IDENT:B+C"	2791
+"Glutamine_(3TMS)_MP_RI:1770_IDENT:C+D"	1793
+"Glycerol_(3TMS)_MP_RI:1280_IDENT:C+D"	1303
+"Inositol_ myo-_(6TMS)_MP_RI:2088_IDENT:C+D"	2140
+"Isobutanoic acid_ 3-amino-_(2TMS)_BP_RI:1207_IDENT:B+C"	1220
+"Maltose_(1MEOX)(8TMS)_BP_RI:2749_IDENT:C+D"	2817
+"Maltose_(1MEOX)(8TMS)_MP_RI:2723_IDENT:C+D"	2783
+"Methionine_(1TMS)_BP_RI:1422_IDENT:C+D"	1425
+"Methionine_(2TMS)_MP_RI:1516_IDENT:C+D"	1532
+"Ribose-5-phosphate_(1MEOX)(5TMS)_MP_RI:2103_IDENT:C+D"	2161
+"Serine_(2TMS)_BP_RI:1260_IDENT:C+D"	1276
+"Serine_(3TMS)_MP_RI:1373_IDENT:C+D"	1391
+"Threonine_(2TMS)_BP_RI:1303_IDENT:C+D"	1318
+"Threonine_(3TMS)_MP_RI:1397_IDENT:C+D"	1417
+"Tryptophan_(3TMS)_MP_RI:2209_IDENT:B+C"	2252

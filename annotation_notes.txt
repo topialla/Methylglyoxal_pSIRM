@@ -1,0 +1,18 @@
+Cinnamic acid is again all over the place…
+
+3OHB very instable chromatography
+Alanine beta 2TMS BP: check with MP!
+Urea sometimes looks like it has laben, but it's an overlap with an adjacent peak (left side)
+Leucine MP, if 299 is in, peaks are sometimes very broad (likely overlap with Glycerol MP)
+Glycerol MP has rather unstable chromatography
+Asp 2TMS BP: unstable chromatography
+Phenylalanine 1TMS BP shaky chromatography
+Ornithine 3TMS shaky
+Glycerol-3-phosphate in injection 030, sample 35 and injection 039, sample 17 shaky (strange chromatography)
+Fructose 1M 5TMS BP injection 039, sample 17 would have a huge peak
+Fructose BP might be also Mannose (quantify mannose on mz 160 Th)
+Lysine 4TMS MP shaky from Injection 045 onward
+Lactose BP is likely contaminant in 13C glucose samples
+Uridine 5P injection 046-056 shaky
+
+

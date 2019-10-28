@@ -1,0 +1,85 @@
+---
+title: "Check_data_integrity"
+author: "Tobias Opialla"
+date: "9/27/2019"
+abstract: "___Nothing conclusive that would explain the huge shifts in CA-intensity by treatment or handling bias from experimental design or sample clean up.___"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,fig.keep = TRUE,fig.path = "./Figures/",highlight = TRUE)
+
+```
+
+```{r packages, echo=FALSE}
+library(tidyverse)
+library(openxlsx)
+```
+
+# cinnamic acid
+
+```{r cinnamic acid}
+df_cinnamic=read.csv('./outputfiles_20190914/cinnamic_acid_09-14-2019_19-54-24/matrices/quantMassAreas_cinAcidNormMatrix.csv',stringsAsFactors = F)
+df_sample_metadata=read.xlsx("../Sample_overview.xlsx",sheet = "Sample_overview",rows=1:37) #row 38:43=Testsamples
+
+df_cinnamic=gather(df_cinnamic,key = "file",value = "AUC",-Metabolite,-QuantMasses)
+df_cinnamic=df_cinnamic %>% mutate(
+  injection_no=str_replace_all(file,".*_to_(\\d{3})_.*","\\1") %>% 
+    as.numeric(),
+  sample_no=str_replace_all(file,".*_to_\\d{3}_(\\d{2})_.*","\\1") %>% 
+    as.numeric(),
+  MG_treatment=ifelse(str_detect(file,"_MG_"),"MG","noMG"),
+  Carbon=str_replace_all(file,".*_(C1[23])_.*","\\1"),
+  labelling_time=str_replace_all(file,".*_(\\d+min)_.*","\\1"),
+  labelling_time_num=str_remove_all(labelling_time,"min") %>%
+    as.numeric(),
+  Replicate=str_replace_all(file,".*_(R\\d)..*","\\1"),
+  Replicate_num=str_remove_all(Replicate,"R") %>% as.numeric()
+)
+
+df_cinnamic=left_join(df_cinnamic,df_sample_metadata %>%
+                        select(corrected.SampleNo.Fabiola,
+                               cellnumber.according.to.conditions,
+                               derivatization.same.MeOX.as.Ident.and.Quant),
+                      by=c("sample_no"="corrected.SampleNo.Fabiola"))
+
+p=ggplot(df_cinnamic,aes(x=injection_no,y=AUC))+
+  scale_fill_viridis_d()+
+  scale_x_continuous(breaks = seq(0,65,5))+
+  geom_hline(yintercept = mean(df_cinnamic$AUC,na.rm = T)+
+               sd(df_cinnamic$AUC,na.rm = T),
+             color="black",linetype="dashed") +
+  geom_hline(yintercept = mean(df_cinnamic$AUC),color="black")+
+  geom_hline(yintercept = mean(df_cinnamic$AUC,na.rm = T) -
+              sd(df_cinnamic$AUC,na.rm = T),
+             color="black",linetype="dashed")
+p+geom_col(aes(fill=MG_treatment))
+p+geom_col(aes(fill=Carbon))
+p+geom_col(aes(fill=labelling_time))
+p+geom_col(aes(fill=Replicate))
+p+geom_col(aes(fill=derivatization.same.MeOX.as.Ident.and.Quant))
+ggplot(df_cinnamic,aes(x=injection_no,y=AUC))+
+  scale_fill_viridis_c()+
+   geom_hline(yintercept = mean(df_cinnamic$AUC,na.rm = T)+
+               sd(df_cinnamic$AUC,na.rm = T),
+             color="black",linetype="dashed") +
+  geom_hline(yintercept = mean(df_cinnamic$AUC),color="black")+
+  geom_hline(yintercept = mean(df_cinnamic$AUC,na.rm = T) -
+              sd(df_cinnamic$AUC,na.rm = T),
+             color="black",linetype="dashed")+
+  geom_col(aes(fill=sample_no))
+ggplot(df_cinnamic,aes(x=injection_no,y=AUC))+
+  scale_fill_viridis_c()+
+   geom_hline(yintercept = mean(df_cinnamic$AUC,na.rm = T)+
+               sd(df_cinnamic$AUC,na.rm = T),
+             color="black",linetype="dashed") +
+  geom_hline(yintercept = mean(df_cinnamic$AUC),color="black")+
+  geom_hline(yintercept = mean(df_cinnamic$AUC,na.rm = T) -
+              sd(df_cinnamic$AUC,na.rm = T),
+             color="black",linetype="dashed")+
+  geom_col(aes(fill=cellnumber.according.to.conditions))
+```
+
+___Nothing conclusive that would explain the huge shifts in CA-intensity by treatment or handling bias from experimental design or sample clean up.___
